@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герои Великой Отечественной Войны</title>
+    <link rel="stylesheet" href="veteran.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="star.jpg" alt="Советская звезда" class="star">
+            <img src="Lenta.png" alt="Георгиевская лента" class="georgievskaya-lenta">
+        </div>
+        <h1>Мой Герой</h1>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <div class="left-side">
+                <img src="veteran_photo_old.jpg" alt="Фото ветерана" class="veteran-photo">
+                <img src="veteran_photo.jpg" alt="Второе фото ветерана" class="veteran-photo">
+            </div>
+
+            <div class="right-side">
+                <div class="info-block">
+                    <h2>Информация о ветеране</h2>
+                    <p>Соломасов Михаил Федорович, родился 13.10.1925 в Тульская обл., Дедиловский р-н, Плехановский с/с, д. Круглое.</p>
+                    <p>Воинское звание: гв. мл. сержант; гв. красноармеец, гв. рядовой, старший писарь секретной части.</p>
+                    <p>Воинская часть: 75 гвардейский зенитный артиллерийский полк.</p>
+                </div>
+                <div class="info-block">
+                    <h2 class="highlight-title">Заслуги и подвиги</h2>
+                    <p class="highlight-text">Соломасов Михаил Федорович награжден "Орденом Отечественной Войны 2 степени", "Медалью за отвагу".</p>
+                    <p class="highlight-text">Был награжден "Медалью за отвагу" за то, что рискуя жизнью вынес из окружения на себе секретные документы части, тем самым сохранил важные сведения и не дал врагу завладеть ими.</p>
+                    <p class="highlight-text">Был награжден "Орденом Отечественной войны 2 степени" за то, что в боях с 14 января по 11 марта 1945 г. образцово нёс службу по определению дальности до самолётов, чем способствовал в сбитии батареей 5 самолётов противника. В условиях групповых налётов вражеской авиации и артиллерийского миномётного обстрела проявил личную храбрость и отвагу.</p>
+                    <div class="medals-section">
+                        <div class="medals-header">
+                            <h3 class="medals-title">Ордена и медали</h3>
+                            <img src="open_more.png" alt="Подробнее" class="toggle-icon" onclick="toggleAwards()" />
+                        </div>
+                        <div class="awards hidden" id="awardsBlock">
+                            <img src="Орден Отечественной войны II степени.png" alt="Орден Отечественной войны" title="Орден Отечественной войны II степени" />
+                            <img src="Медаль За отвагу.png" alt="Медаль за отвагу" title="Медаль за отвагу" />
+                        </div>
+                    </div>
+                </div>
+                <button class="upload-btn" onclick="toggleDocuments()" id="toggleBtn">Загрузить документы</button>
+                <div class="documents" id="documents">
+                    <img src="document1.jpg" alt="Документ 1" />
+                    <img src="document2.jpg" alt="Документ 2" />
+                    <img src="document3.jpg" alt="Документ 3" />
+                    <img src="document4.jpg" alt="Документ 4" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleAwards() {
+            const block = document.getElementById('awardsBlock');
+            const icon = document.querySelector('.toggle-icon');
+            block.classList.toggle('hidden');
+            icon.classList.toggle('open');
+        }
+
+        function toggleDocuments() {
+            const docSection = document.getElementById('documents');
+            const btn = document.getElementById('toggleBtn');
+            const isVisible = docSection.style.display === 'block';
+
+            if (isVisible) {
+                docSection.style.display = 'none';
+                btn.textContent = 'Загрузить документы';
+            } else {
+                docSection.style.display = 'block';
+                btn.textContent = 'Скрыть документы';
+            }
+        }
+    </script>
+</body>
+</html>
