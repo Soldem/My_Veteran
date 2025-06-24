@@ -12,6 +12,8 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #000000;
+    width: 100%; /* Чтобы header растягивался на всю ширину */
+    box-sizing: border-box; /* Учитывать padding в ширине */
 }
 
 .header-left {
@@ -60,7 +62,6 @@ h1 {
     border: 5px solid #fff;
     margin-bottom: 20px;
 }
-
 
 .right-side {
     flex: 2;
@@ -150,20 +151,23 @@ h1 {
     cursor: pointer;
     transition: background 0.3s ease;
     margin-top: 20px;
+    width: 100%; /* Чтобы кнопка растягивалась на всю ширину */
+    box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
-.download-button:hover {
+.upload-btn:hover {
     background-color: #ffae00;
 }
 
-.download-button.clicked {
+.upload-btn.clicked {
     background-color: #ff7f00;
 }
 
 .documents {
-      margin-top: 20px;
-      display: none;
+    margin-top: 20px;
+    display: none;
 }
+
 .documents img {
     display: block;
     max-width: 100%;
@@ -175,6 +179,8 @@ footer {
     background-color: #2c2c2c;
     text-align: center;
     padding: 20px;
+    width: 100%; /* Чтобы footer растягивался на всю ширину */
+    box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
 @media screen and (max-width: 768px) {
@@ -182,7 +188,6 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        max-width: 100%;
         width: 100%;
     }
 
@@ -228,8 +233,7 @@ footer {
         height: 100px;
     }
 
-    .footer {
-        max-width: 100%;
-        width: 100%;
+    footer {
+        width: 100%; /* Для полного расширения footer */
     }
 }
