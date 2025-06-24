@@ -146,13 +146,14 @@ h1 {
 .upload-btn {
     padding: 10px 20px;
     font-size: 32px;
-    background-color: #fff;
+    background-color: #ff8025;
     border: 1px solid #ccc;
     cursor: pointer;
     transition: background 0.3s ease;
     margin-top: 20px;
     width: 100%; /* Чтобы кнопка растягивалась на всю ширину */
     box-sizing: border-box; /* Учитываем padding в ширине */
+    border-radius: 10px;
 }
 
 .upload-btn:hover {
