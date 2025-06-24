@@ -81,6 +81,16 @@
                 btn.textContent = 'Скрыть документы';
             }
         }
+
+        // Обработчик событий для отображения названия медали/ордена
+        const awardImages = document.querySelectorAll('.awards img');
+
+        awardImages.forEach(image => {
+            image.addEventListener('click', () => {
+                const medalName = image.getAttribute('title');
+                alert(medalName); // Отображаем название медали/ордена
+            });
+        });
     </script>
 </body>
 </html>
