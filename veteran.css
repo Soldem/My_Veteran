@@ -157,10 +157,12 @@ h1 {
 
 .upload-btn:hover {
     background-color: #ffae00;
+    transform: scale(1.02); /* Эффект при наведении */
 }
 
 .upload-btn.clicked {
     background-color: #ff7f00;
+    transform: scale(0.85); /* Эффект при наведении */
 }
 
 .documents {
