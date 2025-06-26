@@ -135,14 +135,6 @@ h1 {
     display: none;
 }
 
-.arrow {
-    font-size: 60px; 
-    font-weight: bold; 
-    margin-top: 10px;
-    color: #FFD700;
-    cursor: pointer;
-}
-
 .upload-btn {
     padding: 10px 20px;
     font-size: 32px;
