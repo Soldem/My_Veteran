@@ -61,36 +61,60 @@
     </footer>
 
     <script>
-        function toggleAwards() {
-            const block = document.getElementById('awardsBlock');
-            const icon = document.querySelector('.toggle-icon');
-            block.classList.toggle('hidden');
-            icon.classList.toggle('open');
+    // Функция для переключения видимости блока наград
+    function toggleAwards() {
+        // Находим элемент с id "awardsBlock" — блок, который мы будем скрывать или показывать
+        const block = document.getElementById('awardsBlock');
+        
+        // Находим иконку (класс "toggle-icon"), которая будет менять свой вид
+        const icon = document.querySelector('.toggle-icon');
+        
+        // Используем метод classList.toggle(), чтобы добавить или удалить класс 'hidden' у блока.
+        // Этот класс управляет видимостью блока (скрывает или показывает его)
+        block.classList.toggle('hidden');
+        
+        // То же самое с иконкой: переключаем класс 'open', чтобы изменить её состояние (например, меняем иконку)
+        icon.classList.toggle('open');
+    }
+
+    // Функция для переключения видимости секции с документами
+    function toggleDocuments() {
+        // Находим раздел с документами по id
+        const docSection = document.getElementById('documents');
+        
+        // Находим кнопку, которая управляет видимостью документов
+        const btn = document.getElementById('toggleBtn');
+        
+        // Проверяем текущую видимость документа, сравнивая стиль display
+        const isVisible = docSection.style.display === 'block';
+
+        // Если раздел виден (display: block), то скрываем его
+        if (isVisible) {
+            docSection.style.display = 'none';
+            // Меняем текст на кнопке, если документы скрыты
+            btn.textContent = 'Загрузить документы';
+        } else {
+            // Если раздел не виден, то показываем его
+            docSection.style.display = 'block';
+            // Меняем текст на кнопке, если документы видны
+            btn.textContent = 'Скрыть документы';
         }
+    }
 
-        function toggleDocuments() {
-            const docSection = document.getElementById('documents');
-            const btn = document.getElementById('toggleBtn');
-            const isVisible = docSection.style.display === 'block';
-
-            if (isVisible) {
-                docSection.style.display = 'none';
-                btn.textContent = 'Загрузить документы';
-            } else {
-                docSection.style.display = 'block';
-                btn.textContent = 'Скрыть документы';
-            }
-        }
-
-        // Обработчик событий для отображения названия медали/ордена
-        const awardImages = document.querySelectorAll('.awards img');
-
-        awardImages.forEach(image => {
-            image.addEventListener('click', () => {
-                const medalName = image.getAttribute('title');
-                alert(medalName); // Отображаем название медали/ордена
-            });
+    // Обработчик событий для отображения названия медали/ордена
+    // Находим все изображения с классом 'awards img' (предположительно изображения медалей/ордонов)
+    const awardImages = document.querySelectorAll('.awards img');
+    
+    // Для каждого изображения добавляем обработчик клика
+    awardImages.forEach(image => {
+        image.addEventListener('click', () => {
+            // Получаем название медали/ордена, которое хранится в атрибуте 'title'
+            const medalName = image.getAttribute('title');
+            
+            // Показываем название медали в виде всплывающего окна (alert)
+            alert(medalName);
         });
-    </script>
+    });
+</script>
 </body>
 </html>
