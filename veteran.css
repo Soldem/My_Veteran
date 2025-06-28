@@ -30,14 +30,16 @@ header {
 }
 
 .star {
-    width: 140px;
-    height: 140px;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin-right: 10px;
 }
 
 .georgievskaya-lenta {
-    width: 1000px;
-    height: 100px;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin-right: 20px;
 }
 
@@ -198,8 +200,9 @@ footer {
     }
 
     .georgievskaya-lenta {
-        width: 100%;
+        max-width: 100%;
         height: auto;
+        display: block;
     }
 
     .main-content {
@@ -235,8 +238,9 @@ footer {
     }
 
     .star {
-        width: 100px;
-        height: 100px;
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 
     footer {
