@@ -4,6 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #FFA500, #8B4513);
     color: white;
+    width: 100%;
 }
 
 header {
@@ -185,6 +186,9 @@ footer {
         align-items: center;
         text-align: center;
         width: 100%;
+        width: 100vw; 
+        margin: 0;
+        padding: 0;
     }
 
     .georgievskaya-lenta {
@@ -231,5 +235,8 @@ footer {
 
     footer {
         width: 100%;
+        width: 100vw; 
+        margin: 0;
+        padding: 0;
     }
 }
