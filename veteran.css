@@ -193,13 +193,11 @@ footer {
         align-items: center;
         text-align: center;
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     .georgievskaya-lenta {
-        width: 1000px;
-        height: 100px;
+        width: 100%;
+        height: auto;
     }
 
     .main-content {
@@ -241,7 +239,5 @@ footer {
 
     footer {
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 }
